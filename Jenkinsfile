@@ -15,5 +15,11 @@ pipeline{
 }
 
     }
+       stage("Checkout from SCM"){
+            steps {
+                git branch: 'main', credentialsId: 'github1', url: 'https://github.com/sadhix14/demo.git'
+            }
+
+        }
 
 }
